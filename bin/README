@@ -1,0 +1,1 @@
+See how we're using a fantastically old version of [fop](https://xmlgraphics.apache.org/fop/) ? That's because the XSL-FO that's currently being generated makes newer versions of fop cry like a baby. We should fix that. 

@@ -1,0 +1,134 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>Advanced Features of the XML R&eacute;sum&eacute; Library</title><link rel="stylesheet" href="manual.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.57.0"><link rel="home" href="index.html" title="XML R&eacute;sum&eacute; Library User Guide"><link rel="up" href="getting-started.explore.html" title="Chapter&nbsp;2.&nbsp;Exploring the Features of XML R&eacute;sum&eacute; Library"><link rel="previous" href="getting-started.explore.html" title="Chapter&nbsp;2.&nbsp;Exploring the Features of XML R&eacute;sum&eacute; Library"><link rel="next" href="getting-started.explore.create.html" title="Writing your first XML R&eacute;sum&eacute;"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><h1 class="pageTitle"><a href="../../index.html"><span style="color: red;">XML</span><span style="font-weight: bold;">R&eacute;sum&eacute;</span><span style="color: red;">Library</span></a>:
+        <a href="index.html">User Guide</a></h1><div class="navheader"><table width="100%" summary="Navigation header"><tr><td align="left" width="33%"><a accesskey="p" href="getting-started.explore.html"><img src="caret-l.gif" width="11" height="7" border="0" alt="Previous">Exploring the Features of XML R&eacute;sum&eacute; Library</a>&nbsp;</td><td align="center" width="34%"><a accesskey="u" href="getting-started.explore.html"><img src="caret-u.gif" width="11" height="7" border="0" alt="Up">Exploring the Features of XML R&eacute;sum&eacute; Library</a></td><td align="right" width="33%">&nbsp;<a accesskey="n" href="getting-started.explore.create.html">Writing your first XML R&eacute;sum&eacute;<img src="caret-r.gif" width="11" height="7" border="0" alt="Next"></a></td></tr></table></div><div class="section" lang="en"><div class="titlepage"><div><h2 class="title" style="clear: both"><a name="getting-started.explore.features"></a>Advanced Features of the XML R&eacute;sum&eacute; Library</h2></div></div><div class="section" lang="en"><div class="titlepage"><div><h3 class="title"><a name="getting-started.explore.features.filter"></a>Filtering to target your resume</h3></div></div><p>
+	Filtering allows you to maintain a single, complete resume.xml
+	file that represents the entirety of your career/academic record, 
+	while allowing for the simple creation of targeted r&eacute;sum&eacute;s.  
+	In other words, you can start to think of your XML R&eacute;sum&eacute; as 
+	a database of your every skill, every accomplishment, every _____
+	without worrying about cluttering up the r&eacute;sum&eacute; your employer
+	sees.  Read on to find out how.
+      </p><p>
+	Consider the following snippet of Jane Doe's resume:
+      </p><div class="informalexample"><pre class="programlisting">&lt;skillset&gt;
+            &lt;skill&gt;Carpentry&lt;/skill&gt;
+            &lt;skill&gt;Welding&lt;/skill&gt;
+            &lt;skill&gt;Java Programming&lt;/skill&gt;
+            &lt;skill&gt;XML&lt;/skill&gt;
+            &lt;skill&gt;C++&lt;/skill&gt;
+	    &lt;skill&gt;Good communicator&lt;/skill&gt;
+            &lt;skill&gt;Gourmet Pastry Creation&lt;/skill&gt;
+            &lt;skill&gt;Cooking for construction workers&lt;/skill&gt;
+          &lt;/skillset&gt;</pre></div><p>
+	The problem here is that Jane needs to maintain a record of all
+	her skills, but she doesn't need to tell a potential employer 
+	about all of those skills.  Sure, Jane could selectively 
+	comment out portions of her r&eacute;sum&eacute;, but this can be tedious.  
+	Instead, she should use attributes to describe the categories of
+	r&eacute;sum&eacute; to which a given element applies:
+      </p><div class="informalexample"><pre class="programlisting">&lt;skillset&gt;
+            &lt;skill targets="construction,woodworking"&gt;Carpentry&lt;/skill&gt;
+            &lt;skill targets="construction"&gt;Welding&lt;/skill&gt;
+            &lt;skill targets="programming"&gt;Java Programming&lt;/skill&gt;
+            &lt;skill targets="programming"&gt;XML&lt;/skill&gt;
+            &lt;skill targets="programming"&gt;C++&lt;/skill&gt;
+	    &lt;skill&gt;Good communicator&lt;/skill&gt;
+            &lt;skill targets="foodservice"&gt;Gourmet Pastry Creation&lt;/skill&gt;
+            &lt;skill targets="foodservice+construction"&gt;Cooking for construction workers&lt;/skill&gt;
+          &lt;/skillset&gt;</pre></div><p>
+	After defining her targets, Jane can filter her r&eacute;sum&eacute; to produce 
+	beautifully-formatted, well-focused r&eacute;sum&eacute;s to send to employers.
+	Her "construction" r&eacute;sum&eacute; will contain only those elements 
+	applicable to the construction industry, and the job foreman won't 
+	have to read about her vast knowledge of meringues and bundt 
+	cakes, or her experience coding up an application server in Java.
+      </p><p>
+	You may have noticed that some of Jane's skills apply to more than
+	one target, or apply only when two (or more) targets are defined.
+	By specifying a list of targets (separated by commas), Jane can 
+	ensure that her Carpentry skill will be included in both 
+	"construction" and "woodworking" r&eacute;sum&eacute;s.  Similarly, her "Cooking 
+	for construction workers" skill will apply only to r&eacute;sum&eacute;s where
+	both "foodservice" AND "construction" are targeted.  
+      </p><p>
+	Elements that have no "targets" attribute are always included in 
+	the filtered output.  Thus Jane's communications skills will apply
+	to every r&eacute;sum&eacute;.  
+      </p><p>
+	The "targets" attribute can be used in ANY element, but keep in 
+	mind that using targets on a high-level element (e.g., history or 
+	academics element) will affect all children of that element.  Thus
+	if the history element includes a 'targets="foo"' attribute, and 
+	"foo" is not included in the targets list during the filtering
+	process, then the entire history section will be filtered out, 
+	even if there are subelements of history that do not have the
+	 'targets="foo"' attribute.
+      </p><p>
+	Now, keep in mind that defining targets is entirely up to you.  
+	You can use the targets attribute in any element, and you can 
+	specify any number of values for the target&#8212; just keep in 
+	mind that comma (,) and plus (+) represent OR and AND, 
+	respectively, as per the example above.  If the list of possible
+	targets starts to pile up, just look at the end of a filtered
+	resume.xml file: a list of the possible and selected targets is
+	included for convenience.
+      </p><p>
+	To get a better idea of how this all works, take a look at
+	<tt>examples/example2.xml</tt>.  Trying making 
+	the complete resume (with <b>make all resume=example2</b>),
+	and then the filtered version (<b>make filter 
+	resume=example2</b>).  Then compare 
+	<tt>example2.txt</tt> with 
+	<tt>example2-filtered.txt</tt>.  To create r&eacute;sum&eacute;s 
+	targeted to other purposes, change <b>filter_targets</b>
+	in <tt>Makefile</tt>.
+      </p></div><div class="section" lang="en"><div class="titlepage"><div><h3 class="title"><a name="getting-started.explore.features.customizing"></a>Customizing your r&eacute;sum&eacute;</h3></div></div><p>
+	With just a few tweaks, you can dramatically change the look
+	of your r&eacute;sum&eacute;s.
+      </p><div class="section" lang="en"><div class="titlepage"><div><h4 class="title"><a name="getting-started.explore.features.customizing.params"></a>Modifying the XSL Parameters</h4></div></div><p> 
+	  The first thing to do to customize your resume is to 
+	  check out the parameters files.  The main file is
+	  <tt>xsl/params.xsl</tt>, which contains general
+	  parameters that you can change.  We suggest making a backup of
+	  this file by issuing the command <b>cp params.xsl
+	  params.xsl.dist</b>, and then playing around with the values
+	  inside <tt>params.xsl</tt> to see how they affect
+	  the formatting and output of your resumes.  
+	</p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>
+	  You will need to change <tt>xsl_base</tt> in
+	  <tt>Makefile</tt> to point to your local xsl directory
+	  before any of your changes can take effect.  Otherwise, the 
+	  default parameters stored on the XMLR&eacute;sum&eacute; website are used 
+	  instead.
+	</p></div><p>
+	  Located in the <tt>xsl/paper</tt> directory 
+	  are the <tt>a4.xsl</tt> and 
+	  <tt>letter.xsl</tt> files.  These files specify 
+	  things like margin size and indent size for their respective 
+	  paper formats.
+	</p><p>
+	  The <tt>xsl/country</tt> directory contains 
+	  country-specific parameter files, which contain translations for
+	  everything from "R&eacute;sum&eacute;" to "Mobile Telephone".  If you would 
+	  prefer your r&eacute;sum&eacute; to be called a Curriculum Vitae, this is 
+	  where to look.  The files are sorted by a 2-letter country code
+	  (e.g., nl.xsl for the Netherlands).  If you don't see your 
+	  country there, or if there are errors/omissions in the 
+	  translations, please attempt a translation and submit the 
+	  changes back to the project-- while XML may work across all 
+	  languages, the gentle developers of the XML R&eacute;sum&eacute; Library Project
+	  do not.
+	</p></div><div class="section" lang="en"><div class="titlepage"><div><h4 class="title"><a name="getting-started.explore.features.customizing.css"></a>Modifying the look of your HTML R&eacute;sum&eacute;</h4></div></div><p>
+	  Cascading Style Sheets (CSS) are a powerful way to format the 
+	  look of your HTML R&eacute;sum&eacute;.  A selection of sample CSS files are
+	  provided in the <tt>css</tt> 
+	  directory. If you have not already done so, try changing the value 
+	  of <tt>css.href</tt> in <tt>params.xsl</tt>
+	  to a different stylesheet (you may have to adjust the location
+	  of the stylesheets).  Once you find one you like, you can tweak 
+	  it by editing the CSS file by hand, or create one that is 
+	  entirely your own.  If you think other people would find your
+	  CSS file useful, please consider submitting it back to the 
+	  project.
+	</p></div></div></div><div class="navheader"><table width="100%" summary="Navigation header"><tr><td align="left" width="33%"><a accesskey="p" href="getting-started.explore.html"><img src="caret-l.gif" width="11" height="7" border="0" alt="Previous">Exploring the Features of XML R&eacute;sum&eacute; Library</a>&nbsp;</td><td align="center" width="34%"><a accesskey="u" href="getting-started.explore.html"><img src="caret-u.gif" width="11" height="7" border="0" alt="Up">Exploring the Features of XML R&eacute;sum&eacute; Library</a></td><td align="right" width="33%">&nbsp;<a accesskey="n" href="getting-started.explore.create.html">Writing your first XML R&eacute;sum&eacute;<img src="caret-r.gif" width="11" height="7" border="0" alt="Next"></a></td></tr></table></div></body></html>

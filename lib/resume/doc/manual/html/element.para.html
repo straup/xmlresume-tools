@@ -1,0 +1,25 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>para</title><link rel="stylesheet" href="manual.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.57.0"><link rel="home" href="index.html" title="XML R&eacute;sum&eacute; Library User Guide"><link rel="up" href="elementref.html" title="Element Reference"><link rel="previous" href="element.pager.html" title="pager"><link rel="next" href="element.period.html" title="period"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><h1 class="pageTitle"><a href="../../index.html"><span style="color: red;">XML</span><span style="font-weight: bold;">R&eacute;sum&eacute;</span><span style="color: red;">Library</span></a>:
+        <a href="index.html">User Guide</a></h1><div class="navheader"><table width="100%" summary="Navigation header"><tr><td align="left" width="33%"><a accesskey="p" href="element.pager.html"><img src="caret-l.gif" width="11" height="7" border="0" alt="Previous">pager</a>&nbsp;</td><td align="center" width="34%"><a accesskey="u" href="elementref.html"><img src="caret-u.gif" width="11" height="7" border="0" alt="Up">Element Reference</a></td><td align="right" width="33%">&nbsp;<a accesskey="n" href="element.period.html">period<img src="caret-r.gif" width="11" height="7" border="0" alt="Next"></a></td></tr></table></div><div class="refentry" lang="en"><a name="element.para"></a><div class="titlepage"></div><div class="refnamediv"><h2>Name</h2><p>para &#8212; A paragraph of text</p></div><div class="refsynopsisdiv"><h2>Synopsis</h2><div class="refsect2" lang="en"><h3>Content Model</h3><pre class="synopsis">(#PCDATA|<a href="element.emphasis.html" title="emphasis">emphasis</a>|<a href="element.citation.html" title="citation">citation</a>|<a href="element.url.html" title="url">url</a>|<a href="element.link.html" title="link">link</a>)*</pre></div><div class="refsect2" lang="en"><h3>Attributes</h3><div class="informaltable"><table width="100%" border="1"><colgroup><col align="left"><col align="left"><col align="left"></colgroup><thead><tr valign="top"><th align="left" valign="top">Name</th><th align="left" valign="top">Type</th><th align="left" valign="top">Default</th></tr></thead><tbody><tr valign="top"><td align="left" valign="top">targets</td><td align="left" valign="top">CDATA</td><td align="left" valign="top"><span class="emphasis"><em>None</em></span></td></tr></tbody></table></div></div></div><div class="refsect1" lang="en"><h2>Description</h2><p>
+      The <tt class="sgmltag-element">para</tt> element contains a single
+      paragraph of text. Its contents are not preserved verbatim; instead, it
+      is treated much like HTML. Multiple whitespace characters (including
+      spaces and tabs) are compressed into a single space, and linebreaks are
+      treated as space characters instead of newlines. This allows flexibility
+      in formatting XML source code.
+    </p><p>
+      Paragraphs may contain basic markup to indicate emphasis, URLs, and
+      citations.
+    </p><div class="refsect2" lang="en"><h3>Parents</h3><p>
+        <tt class="sgmltag-element">para</tt> may be contained in these
+        elements:
+        <span class="simplelist"><a href="element.description.html" title="description"><tt class="sgmltag-element">description</tt></a>, <a href="element.legalnotice.html" title="legalnotice"><tt class="sgmltag-element">legalnotice</tt></a>, <a href="element.misc.html" title="misc"><tt class="sgmltag-element">misc</tt></a>, <a href="element.note.html" title="note"><tt class="sgmltag-element">note</tt></a>, <a href="element.objective.html" title="objective"><tt class="sgmltag-element">objective</tt></a>, <a href="element.pub.html" title="pub"><tt class="sgmltag-element">pub</tt></a></span>
+      </p></div></div><div class="refsect1" lang="en"><h2>Examples</h2><div class="informalexample"><pre class="programlisting">&lt;para&gt;
+  This is a boring paragraph.
+&lt;/para&gt;</pre></div><div class="informalexample"><pre class="programlisting">&lt;para&gt;
+  I like to &lt;emphasis&gt;emphasize&lt;/emphasize&gt; my words; in fact, I've written an
+  article on the topic. It is published on the &lt;emphasis&gt;&lt;citation&gt;Really
+  Exciting WRITING!&lt;/citation&gt;&lt;/emphasis&gt; web site at
+  &lt;url&gt;http://www.really-exciting-writing.bob/EMPHASIS.html&lt;/url&gt;.
+&lt;/para&gt;</pre></div></div></div><div class="navheader"><table width="100%" summary="Navigation header"><tr><td align="left" width="33%"><a accesskey="p" href="element.pager.html"><img src="caret-l.gif" width="11" height="7" border="0" alt="Previous">pager</a>&nbsp;</td><td align="center" width="34%"><a accesskey="u" href="elementref.html"><img src="caret-u.gif" width="11" height="7" border="0" alt="Up">Element Reference</a></td><td align="right" width="33%">&nbsp;<a accesskey="n" href="element.period.html">period<img src="caret-r.gif" width="11" height="7" border="0" alt="Next"></a></td></tr></table></div></body></html>

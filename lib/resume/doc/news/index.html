@@ -1,0 +1,424 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html>
+  <head>
+    <title>XML Resume Library News</title>
+    <style type="text/css">
+    <!--
+      li { margin-bottom: .5em; }
+    -->
+    </style>
+  </head>
+  <body>
+    <h1>XML R&eacute;sum&eacute; Library News</h1>
+
+    <p>The XML R&eacute;sum&eacute; Library copyrighted, &copy;
+      2000-2002 by Sean Kelly.  See the <a
+      href="../copying/index.html">copying conditions, license, and
+      disclaimer</a>.
+    </p>
+
+    <p>This document lists user-visible changes to the library.
+    </p>
+
+    <p>This document does not list all DTD changes, nor does it give complete
+      detail on those that it does list. For a full list of changes to the DTD,
+      please see the <a href="../manual/html/elementref.html">Element Reference</a>
+      in the User Guide.
+    </p>
+
+    <h2>Release 1.5.1</h2>
+    <ul>
+      <li>Added Ant support (build.xml) to examples</li>
+      <li>Default output format for referees is now 2-column</li>
+      <li>Fixed a bug that caused some JVM crashes while processing text output</li>
+      <li>Improved internationalization support</li>
+      <li>DTD fixed to support validation of XML files that use the "targets" attribute</li>
+      <li>Small CSS improvements</li>	
+      <li>NEW: Online Resume Converter (ORC)</li>
+    </ul>
+
+    <h2>Release 1.5.0</h2>
+
+    <ul>
+    <li>Added support for targeted r&eacute;sum&eacute;s.  This allows 
+	the user to selectively filter out irrelevant elements and focus 
+	the r&eacute;sum&eacute; to a particular purpose.  A 
+	demonstration of this feature is included in 
+	<code>example/example2.xml</code></li>
+    <li>Cascading Style Sheets (CSS) now default to being embedded 
+	directly into the HTML output, which makes it easier to 
+	email/transfer a r&eacute;sum&eacute;.  Thanks to Luciano Cardoso
+	for the suggestion and hint.</li>
+    <li>Decreased the default margins to conserve space and trees 
+	(PDF output)</li>
+    <li>Referees can now be listed in a 2-column table in the PDF and HTML
+	output.  This behavior is off by default.</li>
+    <li>Italian, French, Spanish, and Brazilian translations have been 
+	improved/fixed.  (Thanks to Didier Cassirame, Gilles 
+	Sadowski, Luciano Cardoso, and Miguel Coca)</li>
+    <li>Localization support for the fax and phone elements has been 
+	improved.  The home.word, mobile.word, and work.word params have
+	been replaced by phone.home.phrase, phone.mobile.phrase, and
+	phone.work.phrase (same applies to fax) that can support arbitrary
+	orderings (eg, Mobile Phone in UK, GSM in French, Cellphone in US).
+	Default translations for some languages may be incomplete, so please
+	send in translations via SourceForge's Patch Request forms. 
+	(Bugs 624365, 629607)</li>
+    <li>Makefile support (in the <code>examples</code> directory) has been 
+	added for using XMLMind's XFC package or the JFOR package to 
+	produce RTF output.  This requires a separate download and is not
+	strongly supported by the XMLR&eacute;sum&eacute; Project.  
+	(Thanks to James Manning)</li>
+    <li>The project element can now have a "title" attribute.</li>
+    <li>The "date" element can now be used in place of "period" for 
+	the "membership" and "job" elements, and period can be used in 
+	in place of date in the award and clearance tags</li>
+    </ul>
+
+    <h2>Release 1.4.2</h2>
+
+    <ul>
+      <li>Fixed a bug that caused unexpected line breaks in text output (bug
+        566653).</li>
+      <li>Decreased the default width of text output from 80 to 72 characters.
+        This allows them to be transmitted in most e-mail programs without
+        wrapping the very last part of each line.</li>
+      <li>Added support for comma-separated formatting of degree subjects. This
+        is now the default. (Thanks to Mark Miller.)</li>
+      <li>Comma-formatted skill lists in text output format are now terminated
+        with a period (feature request 575845).</li>
+      <li>Added a new CSS stylesheet, <code>compact.css</code> that can be used
+        to easily open an HTML r&eacute;sum&eacute; in Microsoft Word and save
+        it as a DOC file. (Contributed by Mark Miller.)</li>
+    </ul>
+
+    <h2>Release 1.4.1</h2>
+
+    <ul>
+      <li>The output stylesheets (<code>us-html.xsl</code>,
+        <code>br-a4.xsl</code>, etc.) are now in the <code>xsl/output</code>
+        directory. (They were previously in the <code>xsl</code> directory.</li>
+      <li>New elements:
+        <a href="../manual/html/element.clearances.html"><code>&lt;clearances&gt;</code></a>
+        and
+        <a href="../manual/html/element.clearance.html"><code>&lt;clearance&gt;</code></a>.
+        These elements may be used to note security clearances that you may
+        have.
+        (Feature request 556633.)</li>
+      <li>New elements:
+        <a href="../manual/html/element.gpa.html"><code>&lt;gpa&gt;</code></a>,
+        <a href="../manual/html/element.score.html"><code>&lt;score&gt;</code></a>
+        and
+        <a href="../manual/html/element.possible.html"><code>&lt;possible&gt;</code></a>.
+        You can use these tags to include a GPA in a degree.
+        r&eacute;sum&eacute;.
+        (Feature request 560641.)</li>
+      <li>New element:
+        <a href="../manual/html/element.location.html"><code>&lt;location&gt;</code></a>.
+        This element can be used to indicate the city of a 
+        <a href="../manual/html/element.job.html"><code>&lt;job&gt;</code></a>,
+        <a href="../manual/html/element.degree.html"><code>&lt;degree&gt;</code></a>,
+        or
+        <a href="../manual/html/element.membership.html"><code>&lt;membership&gt;</code></a>.
+        (Feature request 505444.)</li>
+      <li>
+        <a href="../manual/html/element.name.html"><code>&lt;name&gt;</code></a>
+        may now contain an optional
+        <a href="../manual/html/element.title.html"><code>&lt;title&gt;</code></a>.
+        </li>
+      <li>
+        <a href="../manual/html/element.institution.html"><code>&lt;institution&gt;</code></a>
+        and
+        <a href="../manual/html/element.organization.html"><code>&lt;organization&gt;</code></a>
+        may now contain inline elements.
+        </li>
+      <li>Added Dutch language support, thanks to Andre van Dijk.</li>
+      <li>New CSS stylesheet: resume4.css.</li>
+    </ul>
+
+    <h2>Release 1.4.0</h2>
+
+    <ul>
+      <li>New elements:
+        <a href="../manual/html/element.awards.html"><code>&lt;awards&gt;</code></a>
+        and
+        <a href="../manual/html/element.award.html"><code>&lt;award&gt;</code></a>.
+        You can use these tags to include awards or other honors in a
+        r&eacute;sum&eacute;.
+        (Feature request 548619.)</li>
+      <li>New elements:
+        <a href="../manual/html/element.interests.html"><code>&lt;interests&gt;</code></a>
+        and
+        <a href="../manual/html/element.interest.html"><code>&lt;interest&gt;</code></a>.
+        You can use these tags to include your interests or hobbies in a
+        r&eacute;sum&eacute;.
+        (Feature request 504269.)</li>
+      <li>New elements:
+        <a href="../manual/html/element.fax.html"><code>&lt;fax&gt;</code></a>,
+        <a href="../manual/html/element.pager.html"><code>&lt;pager&gt;</code></a>,
+        and
+        <a href="../manual/html/element.instantMessage.html"><code>&lt;instantMessage&gt;</code></a>
+        (feature requests 485930 and 522200).</li>
+      <li>New element:
+        <a href="../manual/html/element.minor.html"><code>&lt;minor&gt;</code></a>
+        (feature request 558871).</li>
+      <li>New element:
+        <a href="../manual/html/element.lastModified.html"><code>&lt;lastModified&gt;</code></a>
+        (feature request 460165).</li>
+      <li>Deprecated elements:
+        <a href="../manual/html/element.skillareas.html"><code>&lt;skillareas&gt;</code></a>,
+        <a href="../manual/html/element.skills.html"><code>&lt;skills&gt;</code></a>,
+        and
+        <a href="../manual/html/element.pubDate.html"><code>&lt;pubDate&gt;</code></a>.</li>
+      <li><a href="../manual/html/element.phone.html"><code>&lt;phone&gt;</code></a>
+        (as well as the new <code>&lt;fax&gt;</code> element) now has a
+        <code>location</code> attribute (feature request 448039).</li>
+      <li><a href="../manual/html/element.skill.html"><code>&lt;skill&gt;</code></a>
+        now has a <code>level</code> attribute (feature request 485930).</li>
+      <li><a href="../manual/html/element.degree.html"><code>&lt;degree&gt;</code></a>
+        may now contain multiple
+        <a href="../manual/html/element.major.html"><code>&lt;major&gt;</code>s</a>
+        (feature request 558871).</li>
+      <li><a href="../manual/html/element.contact.html"><code>&lt;contact&gt;</code></a>
+        may now contain any number of elements, in any order (feature request 448039).</li>
+      <li><a href="../manual/html/element.pub.html"><code>&lt;pub&gt;</code></a>
+        may now contain a
+        <a href="../manual/html/element.url.html"><code>&lt;url&gt;</code></a>
+        (feature request 548584).</li>
+      <li><a href="../manual/html/element.degree.html"><code>&lt;degree&gt;</code></a>
+        may now optionally contain either a
+        <a href="../manual/html/element.date.html"><code>&lt;date&gt;</code></a> or a
+        <a href="../manual/html/element.period.html"><code>&lt;period&gt;</code></a>
+        (feature requests 485930 and 460156).</li>
+      <li><a href="../manual/html/element.referee.html"><code>&lt;referee&gt;</code></a>
+        may now contain an optional
+        <a href="../manual/html/element.title.html"><code>&lt;title&gt;</code></a>
+        and an optional
+        <a href="../manual/html/element.organization.html"><code>&lt;organization&gt;</code></a>
+        (feature request 539028).</li>
+      <li>Added Portuguese language support, thanks to Felipe Leme.</li>
+      <li>Added German language support, thanks to Jochen Hein (feature request
+        522570).</li>
+      <li>References may now be replaced by alternate text in formatted output
+        with the <a href="../manual/html/param.referees.display.html"
+        ><code>referees.display</code></a> parameter.</li>
+      <li>A new CSS stylesheet is included: <code>resume3.css</code></li>
+      <li>Fixed bug 547663: only the last skill in a list of skills was
+        formatted when the <code>skills.format</code> parameter was set to
+        <code>comma</code>.</li>
+      <li>New chapter in the user guide: <a
+        href="../manual/html/getting-started.convert.html">Converting an XML
+        R&eacute;sum&eacute; to Other Formats</a></li>
+    </ul>
+
+    <h2>Release 1.3.3</h2>
+
+    <ul>
+      <li>User guide now included!</li>
+      <li>Namespaces are supported and used within the stylesheets.</li>
+      <li>We're now compatible with the XSL-FO standard and FOP version 0.20.3.</li>
+      <li>New <code>&lt;link&gt;</code> element to support hyperlinks to employers.</li>
+    </ul>
+
+    <h2>Release 1.3.2</h2>
+
+    <p>Bug fix release:</p>
+
+    <ul>
+      <li>Fixed bug 509432: formatting of academic degrees exhibited
+	bizarre punctuation and spacing depending on what combination
+	of date, institution, subjects, and annotation were present.
+	It's clean now for all combinations.
+      </li>
+      <li>Fixed bug 513515: space for the subject name in an academic
+	degree is significantly wider now.
+      </li>
+    </ul>
+
+    <h2>Release 1.3.1</h2>
+
+    <p>This release fixes a minor bug in the catalog file for the DTD.
+      It also puts descriptions in the HTML output into a
+      <code>&lt;div&gt;</code> block with the CSS class description,
+      enabling you to format descriptions of jobs specially.
+    </p>
+   
+    <h2>Release 1.3.0</h2>
+
+    <ul>
+      <li><strong>Schema Change!</strong> The
+	<code>&lt;subject&gt;</code> element under a
+	<code>&lt;degree&gt;</code> in order to list your college
+	major is now a <code>&lt;major&gt;</code> element.  You will
+	need to change your r&eacute;sum&eacute;s and/or software.
+
+	<p>As a convenience, we have provided an XSLT transformation
+	  in <code>xsl/124-130.xsl</code> that will turn version 1.2.4
+	  r&eacute;sum&eacute;s into 1.3.0 with the
+	  <code>&lt;major&gt;</code> element.
+	</p>
+      </li>
+      <li>The <code>&lt;name&gt;</code> under a
+	<code>&lt;copyright&gt;</code> is now optional.  If omitted,
+	the name will be taken from the <code>&lt;header&gt;</code>.
+      </li>
+      <li>You can specify whether HTML and plain text headings should
+	be standard (flush left) or centered with the
+	<code>header.format</code> parameter.
+      </li>
+      <li>You can format skill sections as bullet lists or
+	comma-separated lists with the <code>skills.format</code>
+	parameter.
+      </li>
+      <li>We've simplified international addresses using a setting for
+	the <code>address.format</code> parameter and also by allowing
+	freeform addresses.
+      </li>
+      <li>You can now list and format professional memberships on your
+	r&eacute;sum&eacute; with the <code>&lt;memberships&gt;</code>
+	element.
+      </li>
+      <li>You can list subjects and levels achieved under each degree
+	with the <code>&lt;subjects&gt;</code> element.  Subjects are
+	formatted for print and web, but not yet for text.
+      </li>
+      <li>You can list personal references with the
+	<code>&lt;referees&gt;</code> element.
+      </li>
+      <li>Many elements contain unique <code>id</code> attributes
+	now.  You can use the <code>name</code> attribute in an
+	<code>&lt;author&gt;</code> element to refer to a publication
+	author by <code>id</code>.
+      </li>
+      <li>You can list projects at a job with the new
+	<code>&lt;projects&gt;</code> element.
+      </li>
+      <li>The graduation <code>&lt;date&gt;</code> on a degree is
+	optional now.
+      </li>
+      <li>There's an SGML catalog file now.</li>
+      <li>The new XSL paramater <code>half.space</code> is used for a
+	smaller amount of space between certain types of paragraphs.
+      </li>
+      <li>The plain text formatting cleans up extra newlines when
+	certain parts of the resume or the titles are empty.  It also
+	wraps long lists of items cleanly.
+      </li>
+
+    </ul>
+
+    <p>Additionally, we've fixed some bugs in the XSL files.</p>
+
+    <h2>Release 1.2.4</h2>
+
+    <p>Bugs fixed:</p>
+    <ul>
+      <li>Old style US addresses in HTML were coming out
+	"City,State".  Now there's a space after the comma:
+	"City,&nbsp;State".
+      </li>
+      <li>The <code>&lt;dayOfMonth&gt;</code> was missing a content
+	model; it has one now (PCDATA).
+      </li>
+      <li><code>&lt;fullDate&gt;</code> wasn't referenced anywhere.
+	It's gone.
+      </li>
+      <li>The plain text stylesheet <code>text.xsl</code>
+	contained an invalid template that Xalan allowed but 4Suite
+	correctly disallowed.  That's fixed now.
+      </li>
+      <li>The HTML output explicitly sets the character set to
+	UTF-8.
+      </li>
+      <li>Bullet lists in the text formatting have been greatly
+	improved.
+      </li>
+      <li>No more blank labels for telephone or email when there's no
+	telephone or email specified.
+      </li>
+      <li>The homepage URL now appears in the HTML formatting.
+      </li>
+    </ul>
+    <p>New features:</p>
+    <ul>
+      <li>Each job in the employment history may now contain a list of
+	achievements, which become formatted as a bullet-list.
+      </li>
+      <li>Achievements and skills now use the same markup model as
+	plain paragraphs, enabling richer semantics.
+      </li>
+      <li>Real en-dashes appear in periods of employment
+	in the FO rendering.
+      </li>
+      <li>Hyphens in the FO rendering separating employer, job title,
+	and period of employment use bullets now (those hyphens looked
+	funny).
+      </li>
+      <li>HTML output now includes Cascading Stylesheet (CSS) "class"
+	attributes, enabling you to customize the HTML appearance of
+	your r&eacute;sum&eacute;.  Two sample stylesheets,
+	<code>resume1.css</code> and <code>resume2.css</code> are in
+	the <code>css</code> directory.
+      </li>
+    </ul>
+
+    <h2>Release 1.2.3</h2>
+
+    <ul>
+      <li><em>Internationalization support</em>.  The DTD and
+	the stylesheets support formatting international addresses
+	with a rich set of metadata.  See the
+	<code>example2.xml</code> r&eacute;sum&eacute; for an
+	example.  Older r&eacute;sum&eacute;s using the US address
+	schema are still compatible.  <strong>Note that FOP 0.19.0
+	does not handle line breaks in addresses correctly yet.  Use
+	XEP from <a href="http://www.renderx.com/">RenderX</a> until
+	the Apache XML Project can fix this bug!</strong>
+      </li>
+
+      <li><em>Localization support</em>.  We've replaced
+	hard-coded words like "Professional Objective" and
+	"r&eacute;sum&eacute;" as well as paper sizes and margins with
+	configurable parameters.  Driver files set these parameters
+	and format r&eacute;sum&eacute;s appropriately.  Support for
+	US English, UK English, and French are included.
+      </li>
+
+      <li><em>Date of birth</em>.  The DTD supports a
+	<code>&lt;birth&gt;</code> element to record date of birth.
+	This element is currently not formatted.
+      </li>
+    </ul>
+
+    <h2>Release 1.2.2</h2>
+
+    <p>This release lets you specify rich content for publications in
+      addition to free-form paragraphs, including
+      <code>&lt;artTitle&gt;</code>, <code>&lt;bookTitle&gt;</code>,
+      <code>&lt;author&gt;</code>, <code>&lt;pubDate&gt;</code>,
+      <code>&lt;publisher&gt;</code>, and
+      <code>&lt;pageNums&gt;</code>.  The stylesheets will format
+      these elements appropriately.
+    </p>
+
+    <h2>Release 1.2.1</h2>
+
+    <ul>
+      <li>Now compatible with <a
+	  href="http://xml.apache.org/fop/index.html">FOP 1.19.0</a>.
+	  You can still expect to see warning messages from FOP, but
+	  these are harmless.
+      </li>
+      <li>Acute accents now appear in the word "r&eacute;sum&eacute;"
+	in the running footer in the FO output.
+      </li>
+
+    </ul>
+
+    <h2>Release 1.2.0</h2>
+
+    <p>The news document is new in this release, 1.2.0.
+    </p>
+
+  </body>
+</html>

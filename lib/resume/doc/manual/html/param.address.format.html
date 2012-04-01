@@ -1,0 +1,50 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>address.format</title><link rel="stylesheet" href="manual.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.57.0"><link rel="home" href="index.html" title="XML R&eacute;sum&eacute; Library User Guide"><link rel="up" href="paramref.html" title="XSL Parameter Reference"><link rel="previous" href="paramref.html" title="XSL Parameter Reference"><link rel="next" href="param.css.href.html" title="css.href"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><h1 class="pageTitle"><a href="../../index.html"><span style="color: red;">XML</span><span style="font-weight: bold;">R&eacute;sum&eacute;</span><span style="color: red;">Library</span></a>:
+        <a href="index.html">User Guide</a></h1><div class="navheader"><table width="100%" summary="Navigation header"><tr><td align="left" width="33%"><a accesskey="p" href="paramref.html"><img src="caret-l.gif" width="11" height="7" border="0" alt="Previous">XSL Parameter Reference</a>&nbsp;</td><td align="center" width="34%"><a accesskey="u" href="paramref.html"><img src="caret-u.gif" width="11" height="7" border="0" alt="Up">XSL Parameter Reference</a></td><td align="right" width="33%">&nbsp;<a accesskey="n" href="param.css.href.html">css.href<img src="caret-r.gif" width="11" height="7" border="0" alt="Next"></a></td></tr></table></div><div class="refentry" lang="en"><a name="param.address.format"></a><div class="titlepage"></div><div class="refnamediv"><h2>Name</h2><p>address.format &#8212; controls default formatting of the <tt class="sgmltag-element">address</tt> element</p></div><div class="refsect1" lang="en"><h2>Applies To</h2><p>
+      This parameter controls the formatting of the <a href="element.address.html" title="address"><tt class="sgmltag-element">address</tt></a> element in all output
+      formats.
+    </p></div><div class="refsect1" lang="en"><h2>Possible Values</h2><p>
+      Possible values include <tt>standard</tt> (the default),
+      <tt>european</tt>, and <tt>italian</tt>.
+    </p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>
+        In the examples below, <tt>&lt;street&gt;</tt> means the
+        value of XML element <tt class="sgmltag-starttag">&lt;street&gt;</tt>, if
+        defined. <tt>&lt;suburb | ward&gt;</tt> means the value
+        of XML element <tt class="sgmltag-starttag">&lt;suburb&gt;</tt>, if defined,
+        otherwise the value of XML element <tt class="sgmltag-starttag">&lt;ward&gt;</tt>, otherwise blank.
+      </p></div><div class="variablelist"><dl><dt><span class="term"><tt>standard</tt></span></dt><dd><p>
+            Formats addresses in North American layout:
+
+            </p><div class="literallayout"><p><tt>&lt;street&gt;<br>
+&lt;street2&gt;<br>
+&lt;suburb&nbsp;|&nbsp;ward&gt;<br>
+&lt;city&gt;,&nbsp;&lt;state&nbsp;|&nbsp;province&nbsp;|&nbsp;county&nbsp;&gt;&nbsp;&lt;zip&nbsp;|&nbsp;postalCode&gt;<br>
+&lt;country&gt;</tt></p></div><p>
+
+          </p></dd><dt><span class="term"><tt>european</tt></span></dt><dd><p>
+            Formats addresses in European layout:
+
+            </p><div class="informalexample"><div class="literallayout"><p><tt>&lt;street&gt;<br>
+&lt;street2&gt;<br>
+&lt;suburb&nbsp;|&nbsp;ward&gt;<br>
+&lt;zip&nbsp;|&nbsp;postalCode&gt;&nbsp;&lt;city&gt;,&nbsp;&lt;state&nbsp;|&nbsp;province&nbsp;|&nbsp;county&nbsp;&gt;&nbsp;&lt;country&gt;</tt></p></div></div><p>
+          </p></dd><dt><span class="term"><tt>italian</tt></span></dt><dd><p>
+            Formats addresses in Italian layout:
+
+            </p><div class="informalexample"><div class="literallayout"><p><tt>&lt;street&gt;<br>
+&lt;street2&gt;<br>
+&lt;postalCode&gt;&nbsp;&lt;city&gt;&nbsp;(&lt;province&gt;)<br>
+&lt;country&gt;</tt></p></div></div><p>
+
+          </p></dd></dl></div><p>
+      If none of these formats suit your needs, there is the option of entering
+      your address as a single text block, in which case it will be formatted
+      with line breaks intact. For example:
+
+      </p><div class="informalexample"><pre class="programlisting">&lt;address&gt;Sr. H&amp;eacute;ctor Garc&amp;iacute;a Mariz&amp;oacute;
+Reina #35, apt. 4a, e/ Gervasio y Escobar
+Ciudad de La Habana, CP 11900
+CUBA&lt;/address&gt;</pre></div><p>
+
+    </p></div></div><div class="navheader"><table width="100%" summary="Navigation header"><tr><td align="left" width="33%"><a accesskey="p" href="paramref.html"><img src="caret-l.gif" width="11" height="7" border="0" alt="Previous">XSL Parameter Reference</a>&nbsp;</td><td align="center" width="34%"><a accesskey="u" href="paramref.html"><img src="caret-u.gif" width="11" height="7" border="0" alt="Up">XSL Parameter Reference</a></td><td align="right" width="33%">&nbsp;<a accesskey="n" href="param.css.href.html">css.href<img src="caret-r.gif" width="11" height="7" border="0" alt="Next"></a></td></tr></table></div></body></html>

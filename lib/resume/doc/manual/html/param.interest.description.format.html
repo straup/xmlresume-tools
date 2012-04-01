@@ -1,0 +1,59 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>interest.description.format</title><link rel="stylesheet" href="manual.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.57.0"><link rel="home" href="index.html" title="XML R&eacute;sum&eacute; Library User Guide"><link rel="up" href="paramref.html" title="XSL Parameter Reference"><link rel="previous" href="param.header.format.html" title="header.format"><link rel="next" href="param.referees.display.html" title="referees.display"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><h1 class="pageTitle"><a href="../../index.html"><span style="color: red;">XML</span><span style="font-weight: bold;">R&eacute;sum&eacute;</span><span style="color: red;">Library</span></a>:
+        <a href="index.html">User Guide</a></h1><div class="navheader"><table width="100%" summary="Navigation header"><tr><td align="left" width="33%"><a accesskey="p" href="param.header.format.html"><img src="caret-l.gif" width="11" height="7" border="0" alt="Previous">header.format</a>&nbsp;</td><td align="center" width="34%"><a accesskey="u" href="paramref.html"><img src="caret-u.gif" width="11" height="7" border="0" alt="Up">XSL Parameter Reference</a></td><td align="right" width="33%">&nbsp;<a accesskey="n" href="param.referees.display.html">referees.display<img src="caret-r.gif" width="11" height="7" border="0" alt="Next"></a></td></tr></table></div><div class="refentry" lang="en"><a name="param.interest.description.format"></a><div class="titlepage"></div><div class="refnamediv"><h2>Name</h2><p>interest.description.format &#8212; controls formatting of interest descriptions</p></div><div class="refsect1" lang="en"><h2>Applies To</h2><p>
+       This parameter controls the formatting of the <a href="element.description.html" title="description"><tt class="sgmltag-element">description</tt></a> element when it is contained
+       in an <a href="element.interest.html" title="interest"><tt class="sgmltag-element">interest</tt></a>. It affects all output formats.
+    </p></div><div class="refsect1" lang="en"><h2>Possible Values</h2><p>
+      Possible values include <tt>single-line</tt> and
+      <tt>block</tt>. <tt>single-line</tt> is the default.
+    </p><p>
+      The examples below demonstrate the formatting of this XML fragment:
+
+      </p><pre class="programlisting">&lt;interests&gt;
+  &lt;interest&gt;
+    &lt;title&gt;Scuba diving&lt;/title&gt;
+  &lt;/interest&gt;
+  &lt;interest&gt;
+    &lt;title&gt;Flying&lt;/title&gt;
+    &lt;description&gt;
+      &lt;para&gt;I have my pilot's license, and have logged over 1000 in-flight
+      hours.&lt;/para&gt;
+      &lt;para&gt;I have also constructed my own airplane from a kit.&lt;/para&gt;
+    &lt;/description&gt;
+  &lt;/interest&gt;
+&lt;/interests&gt;</pre><p>
+    </p><div class="variablelist"><dl><dt><span class="term"><tt>single-line</tt></span></dt><dd><p>
+            This value is the default. Formats all of the <a href="element.para.html" title="para"><tt class="sgmltag-element">para</tt></a> elements in the description on
+            the same logical line as the interest title. The title is separated
+            from the description by a period, and the description paragraphs are
+            separated from each other by
+            <i><tt>description.para.separator.text</tt></i>, which
+            defaults to an em-dash (&#8220;&#8212;&#8221;).
+          </p><p>
+          
+            For example, the XML above would be formatted similar to the
+            following:
+
+            </p><div class="informalexample"><h3><a name="d0e12506"></a>Interests</h3><div class="itemizedlist"><ul type="disc" compact><li><p>Scuba diving</p></li><li><p>
+                  Flying. I have my pilot's license, and have logged over 1000
+                  in-flight hours. &#8212; I have also constructed my own
+                  airplane from a kit.
+                </p></li></ul></div></div><p>
+
+          </p></dd><dt><span class="term"><tt>block</tt></span></dt><dd><p>
+            Formats each of the <tt class="sgmltag-element">para</tt> elements
+            in the description as a separate block below the interest title.
+          </p><p>
+          
+            For example, the XML above would be formatted similar to the
+            following:
+
+            </p><div class="informalexample"><h3><a name="d0e12529"></a>Interests</h3><div class="itemizedlist"><ul type="disc" compact><li><p>Scuba diving</p></li><li><p>Flying</p><p>
+                    I have my pilot's license, and have logged over 1000
+                    in-flight hours.
+                  </p><p>
+                    I have also constructed my own airplane from a kit.
+                  </p></li></ul></div></div><p>
+
+          </p></dd></dl></div></div></div><div class="navheader"><table width="100%" summary="Navigation header"><tr><td align="left" width="33%"><a accesskey="p" href="param.header.format.html"><img src="caret-l.gif" width="11" height="7" border="0" alt="Previous">header.format</a>&nbsp;</td><td align="center" width="34%"><a accesskey="u" href="paramref.html"><img src="caret-u.gif" width="11" height="7" border="0" alt="Up">XSL Parameter Reference</a></td><td align="right" width="33%">&nbsp;<a accesskey="n" href="param.referees.display.html">referees.display<img src="caret-r.gif" width="11" height="7" border="0" alt="Next"></a></td></tr></table></div></body></html>

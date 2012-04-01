@@ -1,0 +1,186 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>Element Reference</title><link rel="stylesheet" href="manual.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.57.0"><link rel="home" href="index.html" title="XML R&eacute;sum&eacute; Library User Guide"><link rel="up" href="ref.html" title="Part&nbsp;II.&nbsp;Reference"><link rel="previous" href="ref.html" title="Part&nbsp;II.&nbsp;Reference"><link rel="next" href="element.academics.html" title="academics"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><h1 class="pageTitle"><a href="../../index.html"><span style="color: red;">XML</span><span style="font-weight: bold;">R&eacute;sum&eacute;</span><span style="color: red;">Library</span></a>:
+        <a href="index.html">User Guide</a></h1><div class="navheader"><table width="100%" summary="Navigation header"><tr><td align="left" width="33%"><a accesskey="p" href="ref.html"><img src="caret-l.gif" width="11" height="7" border="0" alt="Previous">Part&nbsp;II.&nbsp;Reference</a>&nbsp;</td><td align="center" width="34%"><a accesskey="u" href="ref.html"><img src="caret-u.gif" width="11" height="7" border="0" alt="Up">Part&nbsp;II.&nbsp;Reference</a></td><td align="right" width="33%">&nbsp;<a accesskey="n" href="element.academics.html">academics<img src="caret-r.gif" width="11" height="7" border="0" alt="Next"></a></td></tr></table></div><div class="reference" lang="en"><a name="elementref"></a><div class="titlepage"><div><h1 class="title"><a name="elementref"></a>Element Reference</h1></div><hr></div><div class="partintro" lang="en"><div></div><p>
+    XML R&eacute;sum&eacute; files are XML files composed
+    mostly of <a href="gloss.html#gloss.element"><i>elements</i></a>. This
+    part of the user guide documents the semantics (meaning) and syntax
+    (structure) of all of the elements that you can use to construct a r&eacute;sum&eacute;.
+  </p><p>
+    To get started with creating a r&eacute;sum&eacute;, take a look <a href="getting-started.explore.html" title="Chapter&nbsp;2.&nbsp;Exploring the Features of XML R&eacute;sum&eacute; Library">Chapter&nbsp;2</a>, which is a tutorial on creating an XML
+    r&eacute;sum&eacute;. Alternatively, you could examine the content model for the <a href="element.resume.html" title="resume"><tt class="sgmltag-element">resume</tt></a>
+    element, and drill down from there.
+  </p><div class="section" lang="en"><div class="titlepage"><div><h2 class="title" style="clear: both"><a name="d0e586"></a>Changes to the DTD</h2></div></div><p>
+      This sections documents changes to the XML R&eacute;sum&eacute; Library DTD.
+    </p><div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Warning</h3><p>
+        Deprecated elements will still be formatted, and are still valid
+        elements in an XML r&eacute;sum&eacute;. However, their use is discouraged, and they
+        will be removed in a future version of the DTD.
+      </p></div><div class="section" lang="en"><div class="titlepage"><div><h3 class="title"><a name="d0e594"></a>Version ???</h3></div></div><div class="itemizedlist"><ul type="disc"><li><p>
+  	  Changed elements:
+	  <a href="element.projects.html" title="projects"><tt class="sgmltag-element">projects</tt></a>
+	  may now be included in the
+          <a href="element.degree.html" title="degree"><tt class="sgmltag-element">degree</tt></a>
+	  element.
+	</p></li></ul></div></div><div class="section" lang="en"><div class="titlepage"><div><h3 class="title"><a name="d0e609"></a>Version 1.5.0</h3></div></div><div class="itemizedlist"><ul type="disc"><li><p>
+	  Changed elements:
+	  <a href="element.date.html" title="date"><tt class="sgmltag-element">date</tt></a>
+	  can now be used in place of 
+	  <a href="element.period.html" title="period"><tt class="sgmltag-element">period</tt></a>
+	  in 
+	  <a href="element.membership.html" title="membership"><tt class="sgmltag-element">membership</tt></a>
+	  and 
+	  <a href="element.job.html" title="job"><tt class="sgmltag-element">job</tt></a>.
+	</p></li><li><p>
+	  Changed elements: 
+	  <a href="element.period.html" title="period"><tt class="sgmltag-element">period</tt></a> 
+	  can be used in place of 
+	  <a href="element.date.html" title="date"><tt class="sgmltag-element">date</tt></a>
+	  in <a href="element.award.html" title="award"><tt class="sgmltag-element">award</tt></a> and
+   	  <a href="element.clearance.html" title="clearance"><tt class="sgmltag-element">clearance</tt></a>.
+	</p></li><li><p>
+	  Changed element:
+	  <a href="element.major.html" title="major"><tt class="sgmltag-element">major</tt></a>
+	  is no longer a required child of 
+	  <a href="element.degree.html" title="degree"><tt class="sgmltag-element">degree</tt></a>.
+	</p></li><li><p>
+	  Changed element:
+	  The <a href="element.project.html" title="project"><tt class="sgmltag-element">project</tt></a>
+	  element now supports an optional 
+	  <tt class="sgmltag-attribute">title</tt>
+	  attribute.
+	</p></li></ul></div></div><div class="section" lang="en"><div class="titlepage"><div><h3 class="title"><a name="d0e672"></a>Version 1.4.2</h3></div></div><p>
+        No DTD changes.
+      </p></div><div class="section" lang="en"><div class="titlepage"><div><h3 class="title"><a name="d0e677"></a>Version 1.4.1</h3></div></div><div class="itemizedlist"><ul type="disc"><li><p>
+          New elements:
+          <a href="element.clearances.html" title="clearances"><tt class="sgmltag-element">clearances</tt></a> and
+          <a href="element.clearance.html" title="clearance"><tt class="sgmltag-element">clearance</tt></a>.
+        </p></li><li><p>
+          New elements:
+          <a href="element.gpa.html" title="gpa"><tt class="sgmltag-element">gpa</tt></a>,
+          <a href="element.score.html" title="score"><tt class="sgmltag-element">score</tt></a>, and
+          <a href="element.possible.html" title="possible"><tt class="sgmltag-element">possible</tt></a>.
+        </p></li><li><p>
+          New element:
+          <a href="element.location.html" title="location"><tt class="sgmltag-element">location</tt></a>.
+          It may be contained in 
+          <a href="element.job.html" title="job"><tt class="sgmltag-element">job</tt></a>,
+          <a href="element.degree.html" title="degree"><tt class="sgmltag-element">degree</tt></a>,
+          or
+          <a href="element.membership.html" title="membership"><tt class="sgmltag-element">membership</tt></a>.
+        </p></li><li><p>
+          Change:
+          <a href="element.name.html" title="name"><tt class="sgmltag-element">name</tt></a>
+          may now contain a 
+          <a href="element.title.html" title="title"><tt class="sgmltag-element">title</tt></a>.
+        </p></li><li><p>
+          Change:
+          <a href="element.institution.html" title="institution"><tt class="sgmltag-element">institution</tt></a> and
+          <a href="element.organization.html" title="organization"><tt class="sgmltag-element">organization</tt></a>
+          may now contain inline elements
+          (<a href="element.emphasis.html" title="emphasis"><tt class="sgmltag-element">emphasis</tt></a>,
+          <a href="element.citation.html" title="citation"><tt class="sgmltag-element">citation</tt></a>,
+          <a href="element.url.html" title="url"><tt class="sgmltag-element">url</tt></a>, and
+          <a href="element.link.html" title="link"><tt class="sgmltag-element">link</tt></a>).
+        </p></li></ul></div></div><div class="section" lang="en"><div class="titlepage"><div><h3 class="title"><a name="d0e764"></a>Version 1.4.0</h3></div></div><div class="itemizedlist"><ul type="disc"><li><p>
+          New element: <a href="element.minor.html" title="minor"><tt class="sgmltag-element">minor</tt></a>.
+        </p></li><li><p>
+          New element: <a href="element.lastModified.html" title="lastModified"><tt class="sgmltag-element">lastModified</tt></a>.
+        </p></li><li><p>
+          New elements: <a href="element.awards.html" title="awards"><tt class="sgmltag-element">awards</tt></a> and
+          <a href="element.award.html" title="award"><tt class="sgmltag-element">award</tt></a>.
+        </p></li><li><p>
+          New elements: <a href="element.interests.html" title="interests"><tt class="sgmltag-element">interests</tt></a> and
+          <a href="element.interest.html" title="interest"><tt class="sgmltag-element">interest</tt></a>.
+        </p></li><li><p>
+          New elements:
+          <a href="element.fax.html" title="fax"><tt class="sgmltag-element">fax</tt></a>,
+          <a href="element.pager.html" title="pager"><tt class="sgmltag-element">pager</tt></a>, and
+          <a href="element.instantMessage.html" title="instantMessage"><tt class="sgmltag-element">instantMessage</tt></a>.
+          These may be contained in <a href="element.contact.html" title="contact"><tt class="sgmltag-element">contact</tt></a>.
+        </p></li><li><p>
+          New attribute: the <a href="element.phone.html" title="phone"><tt class="sgmltag-element">phone</tt></a> element now has a <tt class="sgmltag-attribute">location</tt> attribute.
+        </p></li><li><p>
+          New attribute: the <a href="element.skill.html" title="skill"><tt class="sgmltag-element">skill</tt></a> element now has a <tt class="sgmltag-attribute">level</tt> attribute.
+        </p></li><li><p>
+          Change: the <a href="element.degree.html" title="degree"><tt class="sgmltag-element">degree</tt></a> element may now contain
+          multiple <a href="element.major.html" title="major"><tt class="sgmltag-element">major</tt></a> elements.
+        </p></li><li><p>
+          Change: the <a href="element.pub.html" title="pub"><tt class="sgmltag-element">pub</tt></a> element may now contain a <a href="element.url.html" title="url"><tt class="sgmltag-element">url</tt></a>
+          element.
+        </p></li><li><p>
+          Change: the <a href="element.contact.html" title="contact"><tt class="sgmltag-element">contact</tt></a> element may now contain any
+          number of its allowed child elements, and they may appear in any
+          order.
+        </p></li><li><p>
+          Change: the <a href="element.resume.html" title="resume"><tt class="sgmltag-element">resume</tt></a> element may now directly
+          contain<a href="element.skillarea.html" title="skillarea"><tt class="sgmltag-element">skillarea</tt></a> elements.
+        </p></li><li><p>
+          Change: the <a href="element.skillset.html" title="skillset"><tt class="sgmltag-element">skillset</tt></a> element may now directly
+          contain <a href="element.skill.html" title="skill"><tt class="sgmltag-element">skill</tt></a> elements.
+        </p></li><li><p>
+          Change: the <a href="element.degree.html" title="degree"><tt class="sgmltag-element">degree</tt></a> element may now contain either
+          a
+          <a href="element.period.html" title="period"><tt class="sgmltag-element">period</tt></a> or a 
+          <a href="element.date.html" title="date"><tt class="sgmltag-element">date</tt></a> element. It could previously
+          contain only a 
+          <a href="element.date.html" title="date"><tt class="sgmltag-element">date</tt></a>.
+        </p></li><li><p>
+          Change: the <a href="element.artTitle.html" title="artTitle"><tt class="sgmltag-element">artTitle</tt></a> and
+          The <a href="element.bookTitle.html" title="bookTitle"><tt class="sgmltag-element">bookTitle</tt></a> elements may now contain
+          <a href="element.link.html" title="link"><tt class="sgmltag-element">link</tt></a> elements.
+        </p></li><li><p>
+          Change: the <a href="element.referee.html" title="referee"><tt class="sgmltag-element">referee</tt></a> element may now contain an
+          optional
+          <a href="element.title.html" title="title"><tt class="sgmltag-element">title</tt></a> element and an optional
+          <a href="element.organization.html" title="organization"><tt class="sgmltag-element">organization</tt></a> element.
+        </p></li><li><p>
+          Change: the <a href="element.month.html" title="month"><tt class="sgmltag-element">month</tt></a> element is no longer required
+          in the
+          <a href="element.date.html" title="date"><tt class="sgmltag-element">date</tt></a> element.
+          (However, it must appear if the <tt class="sgmltag-element">date</tt> contains a
+          <a href="element.dayOfMonth.html" title="dayOfMonth"><tt class="sgmltag-element">dayOfMonth</tt></a> element.)
+        </p></li><li><p>
+          Deprecated element: <a href="element.skillareas.html" title="skillareas"><tt class="sgmltag-element">skillareas</tt></a>.
+          You may simply remove the start and end tags from your r&eacute;sum&eacute;.
+        </p></li><li><p>
+          Deprecated element: <a href="element.skills.html" title="skills"><tt class="sgmltag-element">skills</tt></a>.
+          You may simply remove the start and end tags from your r&eacute;sum&eacute;.
+        </p></li><li><p>
+          Deprecated element: <a href="element.pubDate.html" title="pubDate"><tt class="sgmltag-element">pubDate</tt></a>.
+          Replace it with a <a href="element.date.html" title="date"><tt class="sgmltag-element">date</tt></a> element.
+        </p></li><li><p>
+          Deprecated elements: <a href="element.docpath.html" title="docpath"><tt class="sgmltag-element">docpath</tt></a>,
+          <a href="element.head.html" title="head"><tt class="sgmltag-element">head</tt></a>,
+          <a href="element.node.html" title="node"><tt class="sgmltag-element">node</tt></a>,
+          <a href="element.tail.html" title="tail"><tt class="sgmltag-element">tail</tt></a>,
+          <a href="element.label.html" title="label"><tt class="sgmltag-element">label</tt></a>, and
+          <a href="element.uri.html" title="uri"><tt class="sgmltag-element">uri</tt></a>.
+          Instances of these elements should be removed.
+        </p></li></ul></div></div><div class="section" lang="en"><div class="titlepage"><div><h3 class="title"><a name="d0e1013"></a>Version 1.3.3</h3></div></div><div class="itemizedlist"><ul type="disc"><li><p>
+          New element: <a href="element.link.html" title="link"><tt class="sgmltag-element">link</tt></a>.
+        </p></li><li><p>
+          New attribute: the <a href="element.address.html" title="address"><tt class="sgmltag-element">address</tt></a> element now has an optional
+          <tt class="sgmltag-attribute">format</tt> attribute.
+        </p></li><li><p>
+          New attributes: Added namespace support. More specifically, added
+          <tt class="sgmltag-attribute">xmlns</tt>, <tt class="sgmltag-attribute">xmlns:xsi</tt>, and <tt class="sgmltag-attribute">xsi:schemaLocation</tt> attributes to the <a href="element.resumes.html" title="resumes"><tt class="sgmltag-element">resumes</tt></a> and <a href="element.resume.html" title="resume"><tt class="sgmltag-element">resume</tt></a> elements.
+        </p></li><li><p>
+          Change: <a href="element.employer.html" title="employer"><tt class="sgmltag-element">employer</tt></a> may now contain inline
+          elements
+          (<a href="element.emphasis.html" title="emphasis"><tt class="sgmltag-element">emphasis</tt></a>,
+          <a href="element.citation.html" title="citation"><tt class="sgmltag-element">citation</tt></a>,
+          <a href="element.url.html" title="url"><tt class="sgmltag-element">url</tt></a>, and
+          <a href="element.link.html" title="link"><tt class="sgmltag-element">link</tt></a>).
+        </p></li><li><p>
+          Deprecated element: <a href="element.break.html" title="break"><tt class="sgmltag-element">break</tt></a>. Instances of this element
+          should be removed.
+        </p></li><li><p>
+          Deprecated element: <a href="element.company.html" title="company"><tt class="sgmltag-element">company</tt></a>. Instances of this element
+          should be removed.
+        </p></li><li><p>
+          Deprecated element: <a href="element.street2.html" title="street2"><tt class="sgmltag-element">street2</tt></a>. These elements should be
+          converted to <a href="element.street2.html" title="street2"><tt class="sgmltag-element">street</tt></a> elements.
+        </p></li></ul></div></div><div class="section" lang="en"><div class="titlepage"><div><h3 class="title"><a name="d0e1102"></a>Version 1.3.2</h3></div></div><p>
+        No DTD changes.
+      </p></div></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><a href="element.academics.html">academics</a> - Container for information about academic experience</dt><dt><a href="element.achievement.html">achievement</a> - An accomplishment made at a job</dt><dt><a href="element.achievements.html">achievements</a> - Container for one or more job achievements</dt><dt><a href="element.address.html">address</a> - A postal address</dt><dt><a href="element.annotation.html">annotation</a> - Additional information about a degree</dt><dt><a href="element.artTitle.html">artTitle</a> - A title of an article or other work</dt><dt><a href="element.author.html">author</a> - An author of a publication</dt><dt><a href="element.award.html">award</a> - An award or other honor</dt><dt><a href="element.awards.html">awards</a> - Container for one or more awards</dt><dt><a href="element.birth.html">birth</a> - Container for information about a person's birth</dt><dt><a href="element.bookTitle.html">bookTitle</a> - A title of a book or similar work</dt><dt><a href="element.break.html">break</a> - A linebreak<b> (Deprecated)</b></dt><dt><a href="element.citation.html">citation</a> - The name of a work being referenced</dt><dt><a href="element.city.html">city</a> - The name of a city</dt><dt><a href="element.clearance.html">clearance</a> - A security clearance</dt><dt><a href="element.clearances.html">clearances</a> - One or more security clearances</dt><dt><a href="element.company.html">company</a> - The name of a company<b> (Deprecated)</b></dt><dt><a href="element.contact.html">contact</a> - Container for one or more methods of contacting someone</dt><dt><a href="element.copyright.html">copyright</a> - A copyright notice</dt><dt><a href="element.country.html">country</a> - A country name</dt><dt><a href="element.county.html">county</a> - A county name</dt><dt><a href="element.date.html">date</a> - A specific instant in time</dt><dt><a href="element.dayOfMonth.html">dayOfMonth</a> - An ordinal day of the month</dt><dt><a href="element.degree.html">degree</a> - Container for information about a degree or similar certification</dt><dt><a href="element.degrees.html">degrees</a> - Container for one or more degrees</dt><dt><a href="element.description.html">description</a> - An explanation of something</dt><dt><a href="element.docpath.html">docpath</a> - <b> (Deprecated)</b></dt><dt><a href="element.email.html">email</a> - An e-mail address</dt><dt><a href="element.emphasis.html">emphasis</a> - An emphasized block of text</dt><dt><a href="element.employer.html">employer</a> - A name of an employer</dt><dt><a href="element.fax.html">fax</a> - A fax telephone number</dt><dt><a href="element.firstname.html">firstname</a> - A person's given name</dt><dt><a href="element.from.html">from</a> - The beginning point in a period of time</dt><dt><a href="element.gpa.html">gpa</a> - Information about a grade point average</dt><dt><a href="element.head.html">head</a> - <b> (Deprecated)</b></dt><dt><a href="element.header.html">header</a> - Container for information about the person being described in a r&eacute;sum&eacute;</dt><dt><a href="element.history.html">history</a> - Container for a person's previous (and possibly current) jobs</dt><dt><a href="element.instantMessage.html">instantMessage</a> - An instant message username or address</dt><dt><a href="element.institution.html">institution</a> - A name of an academic institution</dt><dt><a href="element.interest.html">interest</a> - Something a person is interested in</dt><dt><a href="element.interests.html">interests</a> - Container for one or more interests</dt><dt><a href="element.job.html">job</a> - A specific employment engagement</dt><dt><a href="element.jobtitle.html">jobtitle</a> - A job title</dt><dt><a href="element.keyword.html">keyword</a> - A keyword to be used for r&eacute;sum&eacute; indexing and searching</dt><dt><a href="element.keywords.html">keywords</a> - Container for a list of keywords</dt><dt><a href="element.label.html">label</a> - <b> (Deprecated)</b></dt><dt><a href="element.lastModified.html">lastModified</a> - Information about when a r&eacute;sum&eacute; was last modified</dt><dt><a href="element.legalnotice.html">legalnotice</a> - A legal statement</dt><dt><a href="element.level.html">level</a> - A degree type</dt><dt><a href="element.link.html">link</a> - A titled hyperlink</dt><dt><a href="element.location.html">location</a> - A location, with city-level granularity</dt><dt><a href="element.major.html">major</a> - A main course of study</dt><dt><a href="element.membership.html">membership</a> - A professional membership</dt><dt><a href="element.memberships.html">memberships</a> - Container for one or more memberships</dt><dt><a href="element.middlenames.html">middlenames</a> - One or more middle names of a person</dt><dt><a href="element.minor.html">minor</a> - A minor course of study</dt><dt><a href="element.misc.html">misc</a> - Miscellaneous remarks</dt><dt><a href="element.month.html">month</a> - A month name</dt><dt><a href="element.name.html">name</a> - A person's name</dt><dt><a href="element.node.html">node</a> - <b> (Deprecated)</b></dt><dt><a href="element.note.html">note</a> - Additional information</dt><dt><a href="element.objective.html">objective</a> - A person's employment goal</dt><dt><a href="element.organization.html">organization</a> - A name of an organization</dt><dt><a href="element.pageNums.html">pageNums</a> - One or more page numbers or ranges</dt><dt><a href="element.pager.html">pager</a> - A pager telephone number</dt><dt><a href="element.para.html">para</a> - A paragraph of text</dt><dt><a href="element.period.html">period</a> - A period of time</dt><dt><a href="element.phone.html">phone</a> - A voice telephone number</dt><dt><a href="element.possible.html">possible</a> - The highest possible score in a GPA</dt><dt><a href="element.postalCode.html">postalCode</a> - A postal code</dt><dt><a href="element.prefecture.html">prefecture</a> - A name of a prefecture or other administrative district</dt><dt><a href="element.present.html">present</a> - Indicates the current time</dt><dt><a href="element.project.html">project</a> - Container for information about a project</dt><dt><a href="element.projects.html">projects</a> - Container for one or more projects</dt><dt><a href="element.province.html">province</a> - A name or abbreviation of a province</dt><dt><a href="element.pub.html">pub</a> - A work published by the r&eacute;sum&eacute; owner</dt><dt><a href="element.pubDate.html">pubDate</a> - The date a work was published<b> (Deprecated)</b></dt><dt><a href="element.publisher.html">publisher</a> - Information about a publisher of a work</dt><dt><a href="element.pubs.html">pubs</a> - A group of one or more publications</dt><dt><a href="element.referee.html">referee</a> - Someone who can provide additional information about the person the r&eacute;sum&eacute; describes</dt><dt><a href="element.referees.html">referees</a> - Contains one or more referees</dt><dt><a href="element.result.html">result</a> - An outcome of a subject</dt><dt><a href="element.resume.html">resume</a> - A r&eacute;sum&eacute; or curriculum vitae</dt><dt><a href="element.resumes.html">resumes</a> - A collection of one or more r&eacute;sum&eacute;s</dt><dt><a href="element.score.html">score</a> - The score earned in a GPA</dt><dt><a href="element.skill.html">skill</a> - A name and/or description of a skill</dt><dt><a href="element.skillarea.html">skillarea</a> - A group of broadly related skill sets</dt><dt><a href="element.skillareas.html">skillareas</a> - Group of one or more skill areas<b> (Deprecated)</b></dt><dt><a href="element.skills.html">skills</a> - Group of one or more skills<b> (Deprecated)</b></dt><dt><a href="element.skillset.html">skillset</a> - A titled group of one or more related skills</dt><dt><a href="element.state.html">state</a> - A name or abbreviation of a state</dt><dt><a href="element.street.html">street</a> - A street name, number, and other related information</dt><dt><a href="element.street2.html">street2</a> - A second line of a street address<b> (Deprecated)</b></dt><dt><a href="element.subject.html">subject</a> - A name of a class or topic of study</dt><dt><a href="element.subjects.html">subjects</a> - A group of one or more subjects</dt><dt><a href="element.suburb.html">suburb</a> - A name of a suburb</dt><dt><a href="element.suffix.html">suffix</a> - A suffix of a name, usually specifying lineage</dt><dt><a href="element.surname.html">surname</a> - A family name</dt><dt><a href="element.tail.html">tail</a> - <b> (Deprecated)</b></dt><dt><a href="element.title.html">title</a> - A title or heading</dt><dt><a href="element.to.html">to</a> - The ending point in a period of time</dt><dt><a href="element.uri.html">uri</a> - A Uniform Resource Indicator<b> (Deprecated)</b></dt><dt><a href="element.url.html">url</a> - A Uniform Resource Locator</dt><dt><a href="element.ward.html">ward</a> - A name of a division of a city, town, or county</dt><dt><a href="element.year.html">year</a> - A year</dt><dt><a href="element.zip.html">zip</a> - A zip code</dt></dl></div></div></div><div class="navheader"><table width="100%" summary="Navigation header"><tr><td align="left" width="33%"><a accesskey="p" href="ref.html"><img src="caret-l.gif" width="11" height="7" border="0" alt="Previous">Part&nbsp;II.&nbsp;Reference</a>&nbsp;</td><td align="center" width="34%"><a accesskey="u" href="ref.html"><img src="caret-u.gif" width="11" height="7" border="0" alt="Up">Part&nbsp;II.&nbsp;Reference</a></td><td align="right" width="33%">&nbsp;<a accesskey="n" href="element.academics.html">academics<img src="caret-r.gif" width="11" height="7" border="0" alt="Next"></a></td></tr></table></div></body></html>

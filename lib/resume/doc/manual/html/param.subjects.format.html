@@ -1,0 +1,37 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>subjects.format</title><link rel="stylesheet" href="manual.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.57.0"><link rel="home" href="index.html" title="XML R&eacute;sum&eacute; Library User Guide"><link rel="up" href="paramref.html" title="XSL Parameter Reference"><link rel="previous" href="param.skills.level.display.html" title="skills.level.display"><link rel="next" href="cssref.html" title="Chapter&nbsp;3.&nbsp;CSS Class Reference"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><h1 class="pageTitle"><a href="../../index.html"><span style="color: red;">XML</span><span style="font-weight: bold;">R&eacute;sum&eacute;</span><span style="color: red;">Library</span></a>:
+        <a href="index.html">User Guide</a></h1><div class="navheader"><table width="100%" summary="Navigation header"><tr><td align="left" width="33%"><a accesskey="p" href="param.skills.level.display.html"><img src="caret-l.gif" width="11" height="7" border="0" alt="Previous">skills.level.display</a>&nbsp;</td><td align="center" width="34%"><a accesskey="u" href="paramref.html"><img src="caret-u.gif" width="11" height="7" border="0" alt="Up">XSL Parameter Reference</a></td><td align="right" width="33%">&nbsp;<a accesskey="n" href="cssref.html">CSS Class Reference<img src="caret-r.gif" width="11" height="7" border="0" alt="Next"></a></td></tr></table></div><div class="refentry" lang="en"><a name="param.subjects.format"></a><div class="titlepage"></div><div class="refnamediv"><h2>Name</h2><p>subjects.format &#8212; controls formatting of the <tt class="sgmltag-element">subjects</tt> element</p></div><div class="refsect1" lang="en"><h2>Applies To</h2><p>
+       This parameter controls the formatting of the <a href="element.subjects.html" title="subjects"><tt class="sgmltag-element">subjects</tt></a> element in all output formats.
+    </p></div><div class="refsect1" lang="en"><h2>Possible Values</h2><p>
+      Possible values include <tt>comma</tt> (the default) and
+      <tt>table</tt>.
+    </p><p>
+      The examples below show how a <tt class="sgmltag-starttag">&lt;subjects&gt;</tt>
+      section like this would be rendered:
+
+      </p><div class="informalexample"><pre class="programlisting">&lt;subjects&gt;
+  &lt;subject&gt;
+    &lt;title&gt;English&lt;/title&gt;
+    &lt;result&gt;C&lt;/result&gt;
+  &lt;/subject&gt;
+  &lt;subject&gt;
+    &lt;title&gt;Science&lt;/title&gt;
+    &lt;result&gt;A&lt;/result&gt;
+  &lt;/subject&gt;
+  &lt;subject&gt;
+    &lt;title&gt;Math&lt;/title&gt;
+    &lt;result&gt;B-&lt;/result&gt;
+  &lt;/subject&gt;
+&lt;/subjects&gt;</pre></div><p>
+
+    </p><div class="variablelist"><dl><dt><span class="term"><tt>comma</tt></span></dt><dd><p>
+            Produces a comma-separated list on a single line:
+
+            </p><div class="informalexample"><p>
+                Subjects: English (C), Science (A), Math (B-).
+              </p></div><p>
+          </p></dd><dt><span class="term"><tt>table</tt></span></dt><dd><p>
+            Produces a table, with subject name in the first column and result
+            in the second column:
+          </p><div class="informalexample"><h4><a name="d0e12796"></a>Subjects</h4><div class="informaltable"><table border="0"><colgroup><col><col></colgroup><tbody><tr><td>English</td><td>C</td></tr><tr><td>Science</td><td>A</td></tr><tr><td>Math</td><td>B-</td></tr></tbody></table></div></div></dd></dl></div></div></div><div class="navheader"><table width="100%" summary="Navigation header"><tr><td align="left" width="33%"><a accesskey="p" href="param.skills.level.display.html"><img src="caret-l.gif" width="11" height="7" border="0" alt="Previous">skills.level.display</a>&nbsp;</td><td align="center" width="34%"><a accesskey="u" href="paramref.html"><img src="caret-u.gif" width="11" height="7" border="0" alt="Up">XSL Parameter Reference</a></td><td align="right" width="33%">&nbsp;<a accesskey="n" href="cssref.html">CSS Class Reference<img src="caret-r.gif" width="11" height="7" border="0" alt="Next"></a></td></tr></table></div></body></html>

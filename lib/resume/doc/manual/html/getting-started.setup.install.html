@@ -1,0 +1,86 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>Installing and Configuring the Software</title><link rel="stylesheet" href="manual.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.57.0"><link rel="home" href="index.html" title="XML R&eacute;sum&eacute; Library User Guide"><link rel="up" href="getting-started.setup.html" title="Chapter&nbsp;1.&nbsp;Setting up the XML R&eacute;sum&eacute; Library"><link rel="previous" href="getting-started.setup.software.html" title="Getting the Software"><link rel="next" href="getting-started.explore.html" title="Chapter&nbsp;2.&nbsp;Exploring the Features of XML R&eacute;sum&eacute; Library"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><h1 class="pageTitle"><a href="../../index.html"><span style="color: red;">XML</span><span style="font-weight: bold;">R&eacute;sum&eacute;</span><span style="color: red;">Library</span></a>:
+        <a href="index.html">User Guide</a></h1><div class="navheader"><table width="100%" summary="Navigation header"><tr><td align="left" width="33%"><a accesskey="p" href="getting-started.setup.software.html"><img src="caret-l.gif" width="11" height="7" border="0" alt="Previous">Getting the Software</a>&nbsp;</td><td align="center" width="34%"><a accesskey="u" href="getting-started.setup.html"><img src="caret-u.gif" width="11" height="7" border="0" alt="Up">Setting up the XML R&eacute;sum&eacute; Library</a></td><td align="right" width="33%">&nbsp;<a accesskey="n" href="getting-started.explore.html">Exploring the Features of XML R&eacute;sum&eacute; Library<img src="caret-r.gif" width="11" height="7" border="0" alt="Next"></a></td></tr></table></div><div class="section" lang="en"><div class="titlepage"><div><h2 class="title" style="clear: both"><a name="getting-started.setup.install"></a>Installing and Configuring the Software</h2></div></div><div class="section" lang="en"><div class="titlepage"><div><h3 class="title"><a name="getting-started.setup.install.xmlresume"></a>XML R&eacute;sum&eacute; Library</h3></div></div><p>
+        The XML R&eacute;sum&eacute; Library comes in a tarball (or zip archive aimed at Windows
+        users) that includes:
+        
+        </p><div class="itemizedlist"><ul type="disc"><li><p>The DTD</p></li><li><p>
+              XSL stylesheets, for converting your XML r&eacute;sum&eacute; to plain text,
+              HTML, or XSL Formatting Objects (XSL-FO). (XSL-FO can then be
+              rendered to PDF by an FO processor like FOP.)
+            </p></li><li><p>Some sample r&eacute;sum&eacute;s in XML format</p></li><li><p>
+              A Makefile, for generating r&eacute;sum&eacute; formats with a simple
+              <b>make</b> command
+            </p></li><li><p>
+              A few CSS stylesheets that can be used to fine-tune the appearance
+              of the HTML version of your r&eacute;sum&eacute;.
+            </p></li></ul></div><p>
+
+      </p><p>
+        The most straightforward way to make use of these resources is to
+        recursively copy the "examples" directory to where you want to work with
+        your r&eacute;sum&eacute;. For instance:
+
+        </p><div class="informalexample"><pre class="screen">[resume-1_5_1]$ cp -a examples ~/resume</pre></div><p>
+
+      </p><p>
+        The Makefile uses the filename <tt>resume.xml</tt> by
+        default. If this is unacceptable you will need to edit the line
+        <tt>resume = resume</tt> to match the filename you use, such
+        as <tt>resume = myresume</tt> if your r&eacute;sum&eacute; is
+        <tt>myresume.xml</tt>.
+      </p><div class="tip" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Tip</h3><p>You can also indicate your r&eacute;sum&eacute; filename on the command line
+        when you build your r&eacute;sum&eacute;, e.g.:
+        
+          </p><div class="informalexample"><pre class="screen">[resume]$ make resume=myresume</pre></div><p>
+        </p></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>
+          The DTD and XSL files you've downloaded to your computer aren't used
+          by default when building your r&eacute;sum&eacute;. Instead, the versions on the
+          XML R&eacute;sum&eacute; Library web site are used. This ensures that you're always
+          using the most recent version; however, it also means that builds take
+          longer (since file have to be downloaded each time you build your
+          r&eacute;sum&eacute;) and that you can't build a r&eacute;sum&eacute; offline.
+        </p><p>
+          If you'd like to use your local copy of the XSL stylesheets, edit the
+          <tt>xsl_base</tt> variable in the example Makefile to point
+          to your local XSL directory. For example:
+
+          </p><div class="informalexample"><pre class="programlisting">xsl_base = ~/resume-1_5_1/xsl</pre></div><p>
+        </p><p>
+          To use your local copy of the DTD, change the
+          <tt>DOCTYPE</tt> declaration at the top of your resume to
+          look like this:
+
+          </p><div class="informalexample"><pre class="programlisting">&lt;!DOCTYPE resume PUBLIC "-//Sean Kelly//DTD Resume 1.5.1//EN"
+  "~/resume-1_5_1/dtd/resume.dtd"&gt;</pre></div><p>
+
+        </p></div></div><div class="section" lang="en"><div class="titlepage"><div><h3 class="title"><a name="getting-started.setup.install.xml-tools"></a>Xerces, Xalan, and FOP</h3></div></div><p>
+        Each of these three packages need to be untarred and their jar files
+        copied to your JRE's <tt>ext/</tt>
+        directory. This is typically <tt>/usr/java/jdk1.3.1_02/jre/lib/ext/</tt>, but may
+        vary depending on who packaged your JRE. We will simply refer to it as
+        the <tt>ext/</tt> directory.
+      </p><p>
+        Xerces consists of the jars
+        <tt>xmlParserAPIs.jar</tt>,
+        <tt>xercesSamples.jar</tt>, and
+        <tt>xercesImpl.jar</tt>,
+        which are in the top directory of the Xerces zip archive.
+      </p><p>
+        Xalan consists of the jars
+        <tt>runtime.jar</tt>,
+        <tt>xalanservlet.jar</tt>,
+        <tt>xalansamples.jar</tt>,
+        <tt>regexp.jar</tt>,
+        <tt>JLex.jar</tt>,
+        <tt>java_cup.jar</tt>,
+        <tt>bsf.jar</tt>,
+        <tt>xml-apis.jar</tt>,
+        <tt>BCEL.jar</tt>,
+        <tt>xsltc.jar</tt>,
+        <tt>xalan.jar</tt>, and
+        <tt>xercesImpl.jar</tt>
+        in the <tt>bin/</tt>
+        directory. All of these need to be copied to the <tt>ext/</tt> directory.
+      </p></div></div><div class="navheader"><table width="100%" summary="Navigation header"><tr><td align="left" width="33%"><a accesskey="p" href="getting-started.setup.software.html"><img src="caret-l.gif" width="11" height="7" border="0" alt="Previous">Getting the Software</a>&nbsp;</td><td align="center" width="34%"><a accesskey="u" href="getting-started.setup.html"><img src="caret-u.gif" width="11" height="7" border="0" alt="Up">Setting up the XML R&eacute;sum&eacute; Library</a></td><td align="right" width="33%">&nbsp;<a accesskey="n" href="getting-started.explore.html">Exploring the Features of XML R&eacute;sum&eacute; Library<img src="caret-r.gif" width="11" height="7" border="0" alt="Next"></a></td></tr></table></div></body></html>
