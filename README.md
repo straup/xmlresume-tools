@@ -5,8 +5,8 @@ These are my tools for working with
 [XML Resume](http://xmlresume.sourceforge.net/) documents. They produce the
 stuff you see [over here](http://www.aaronstraupcope.com/resume/).
 
-I wrote myself a Makefile to hide all the boring details from myself and I run
-it like this:
+I wrote a Makefile to hide all the boring details and I run it like
+this:
 
 	make all RESUME=/path/to/resume-en.xml NAME=aaronstraupcope
 
