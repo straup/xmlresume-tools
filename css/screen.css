@@ -67,7 +67,12 @@ h2 {
    color: #adadad;
 } 
 
-li {}
+li {
+    line-height:1.3em;
+    margin-left:2%;
+    margin-right:10%;
+    margin-bottom: 10px;
+}
 
 p { 
   /* border:solid thin; */
@@ -206,7 +211,8 @@ ul {
 
 .linkA {}
 
-.location {}
+.location {
+}
 
 .membership {
 	    margin-left:-0.4in;
