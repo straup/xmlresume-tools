@@ -10,9 +10,12 @@ it like this:
 
 	make all RESUME=/path/to/resume-en.xml NAME=aaronstraupcope
 
-This creates 4 copies of my resume: A plain-text version, an HTML version (with
-an inline stylesheet) and two PDF versions one of which contains personal
-information and references and another which does not.
+This creates 5 copies of my resume: A plain-text version, an HTML version (with
+an inline stylesheet), an XML version and two PDF versions one of which contains
+personal information and references and another which does not.
+
+(By default personal information and references are removed from all other
+formats.)
 
 The files are created in `xmlresume-tools/build` directory.
 

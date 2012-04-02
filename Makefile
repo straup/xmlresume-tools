@@ -1,7 +1,10 @@
-all: clean text html pdf xml
+all: clean text html pdf xml clean-fo
 
 clean:
 	rm -rf build/*.*
+
+clean-fo:
+	rm -rf build/*.fo
 
 xml:
 
