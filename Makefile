@@ -1,7 +1,15 @@
-all: clean text html pdf
+all: clean text html pdf xml
 
 clean:
 	rm -rf build/*.*
+
+xml:
+
+	xsltproc -o build/$(NAME)-resume-en.xml \
+		--param header.address.display 0 \
+		--param header.phone.display 0 \
+		--param referees.display 0 \
+		format/xml.xsl $(RESUME)
 
 text:
 	xsltproc -o build/$(NAME)-resume-en.txt \
