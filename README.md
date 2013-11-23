@@ -28,3 +28,10 @@ part of the [libxml](http://xmlsoft.org/) library. You will also need a copy of
 the Java interpreter for generating PDF files.
 
 That should be it.
+
+To do
+--
+
+* Use Bootstrap for .html resume
+* Make the .txt resume output Markdown (maybe?)
+* Make the .fo resume work with current versions of Fop (or consider just using wkpdf?)
