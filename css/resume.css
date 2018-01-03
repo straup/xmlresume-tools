@@ -16,29 +16,22 @@ a:hover {
 	}
 
 html {
-     margin-left   :1.5in;
+
 }	
 
 body {
      margin-top    : 0in;
      margin-bottom : 0in;
-     margin-left   : 0in;
+     margin-left   : 5em;
      margin-right  : 0in;
 
-     padding-top    : 0.5in;
-     padding-bottom : 0.25in;
-     padding-right  : 0in;
-     padding-left   : 0.5in;
+     padding-top    : 2em;
+     padding-bottom : 5em;
+     padding-right  : 4em;
+     padding-left   : 4em;
 
-     font-family : sans-serif;
-     font-size   : 10pt;
-
-     /*
-     background-repeat:no-repeat;
-     background-position: 0in 0.50in;
-     background-attachment:fixed;
-     background-image: url("http://aaronland.net/site/media/img/index/aaronland-a.gif");
-     */
+     font-size   : 1.3em;
+     line-height: 1.5em;
 
 }
 
@@ -53,6 +46,7 @@ h1 {
 
    border-bottom:1px dotted #ccc;
    padding-bottom:0.1in;
+   margin-bottom: 1em;
 }
 
 h2 { 
@@ -67,18 +61,15 @@ h2 {
    color: #adadad;
 } 
 
+
 li {
     line-height:1.3em;
-    margin-left:2%;
     margin-right:10%;
     margin-bottom: 10px;
 }
 
 p { 
-  /* border:solid thin; */
-  margin-top:0in;
-  margin-right:0.50in;
-  text-align:justify;
+
 } 
 
 sup { 
@@ -163,7 +154,13 @@ ul {
 .employer {}
 
 .externalLinks {
-	       font-size:8pt;       
+	font-size: small;
+	margin-left: 0px;
+	padding-left: 0px;
+}
+
+.externalLinks ul li {
+margin-left: 1em;
 }
 
 .heading {}
@@ -184,6 +181,7 @@ ul {
 	  color:#666;
 	  font-weight:600;
 	  font-size:1.1em;
+	margin-bottom: 1.5em;
 }
 
 .jobDescription {
@@ -212,6 +210,9 @@ ul {
 .linkA {}
 
 .location {
+	font-size: small;
+	font-family: sans-serif;
+	color: #666;
 }
 
 .membership {
@@ -246,18 +247,13 @@ ul {
 }
 
 .project {
-	 list-style-type:square;
+	 list-style-type:circle;
 	 list-style-position:inside;
+	line-height: 1.6em;
 }
 
 .projects {
-	  font-size:10pt;
-	  margin-left:-0.15in;
-	  margin-right:0.50in;
-
-      font-size:11pt;
-      font-family:serif;
-      color:#3f3f3f;
+	font-style: italic;
 }
 
 .projects p { display:none; }
@@ -295,5 +291,178 @@ ul {
 	  font-size: 1.1em;
 	  margin-left:0in;
 }
+
+@media (min-width: 320px) and (max-width: 400px) {
+
+html {
+	margin: 0px !important;
+}
+
+body {
+	margin: 1.25em !important;
+	padding: 0px !important;
+
+	font-size: 1.1em;
+	line-height: 1.5em;
+	font-family: sans-serif;
+	font-weight: 100;
+}
+
+.para {
+	margin-left: 0px !important;
+}
+
+.jobDescription, .skills, .pubs, .interestTitle, .activity  {
+	margin-left: 0px !important;
+	margin-right: 0px !important;
+	padding-left: 0px !important;
+	padding-right: 0px !important;
+	font-size: small;
+}
+
+.externalLinks {
+	margin-left: 0px !important;
+	margin-right: 0px !important;
+	padding-left: .5em !important;
+	padding-right: 0px !important;
+}
+
+.projects, .degree {
+	font-size: small;
+}
+
+.projects ul {
+	margin:0px !important;
+	padding: 0px !important;
+}
+
+.project{
+	line-height: 1.8em !important;
+}
+
+.para {
+	font-size: small;
+}
+
+.activityDescription {
+	margin:0px !important;
+	padding: 0px !important;
+	font-size: small;
+}
+
+}
+
+@media print {
+
+html {
+	margin-top: 0px !important;
+	margin-left: 0px !important;
+	margin-right: 0px !important;
+	padding-top: 0px !important;
+	padding-left: 0px !important;
+	padding-right: 0px !important;
+
+}
+
+body {
+	margin-top: 0px !important;
+	margin-left: 0px !important;
+	margin-right: 0px !important;
+	padding-top: 0px !important;
+	padding-left: 0px !important;
+	padding-right: 0px !important;
+	line-height: 1.4em !important;
+	font-size: 10pt !important;
+	font-weight: 200 !important;
+}
+
+a {
+	color: #000 !important;
+	font-weight: 600 !important;
+}
+
+h1 {
+   	border-bottom:1px solid #ccc !important;
+	margin-bottom: 1em !important;
+}
+
+.resume {
+	padding-top: 0px !important;
+	margin-top: 0px !important;
+}
+
+.job {
+}
+
+
+.location {
+display: none !important;
+}
+
+.jobTitle {
+	margin-bottom: 2em !important;
+}
+
+.skills {
+border-top: none !important;
+}
+
+.projects {
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+	margin-bottom: 2em !important;
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+	font-size: 8pt !important;
+	font-family: sans-serif;
+}
+
+.project {
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+
+.description, .activityDescription, .jobDescription {
+	border-top: 1px solid #ccc;
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+
+.para, .pub, .degree {
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+
+.skills, .skillSetTitle {
+	margin: 0 !important;
+	margin-bottom: .5em !important;
+	padding: 0 !important;
+}
+
+ul, ol {
+padding-right: 0 !important;
+padding-left: .5em !important;
+}
+
+ol li {
+	margin-bottom: .2em !important;
+}
+
+ol li a {
+}
+
+.externalLinks li a {
+	font-weight: 100 !important;
+	font-size: small;
+}
+
+}
+
 
 </xsl:stylesheet>

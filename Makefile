@@ -27,7 +27,7 @@ html:
 		--param header.phone.display 0 \
 		--param referees.display 0 \
 		--param css.embed 1 \
-		--stringparam css.href "../css/screen.css" \
+		--stringparam css.href "../css/resume.css" \
 		format/html.xsl $(RESUME)
 
 pdf:
