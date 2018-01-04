@@ -53,6 +53,7 @@ $Id: html.xsl,v 1.17 2002/11/10 20:48:58 brandondoyle Exp $
   <xsl:template match="/">
     <html>
       <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <title>
           <xsl:apply-templates select="r:resume/r:header/r:name"/>
           <xsl:text> - </xsl:text>

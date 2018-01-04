@@ -159,8 +159,8 @@ ul {
 	padding-left: 0px;
 }
 
-.externalLinks ul li {
-margin-left: 1em;
+.externalLinks li {
+	margin-left: 2em !important;
 }
 
 .heading {}
